@@ -13,4 +13,4 @@ RUN curl -SL ${ES_URL} -o elasticsearch.tar.gz \
 
 EXPOSE 9300 9200
 
-ENTRYPOINT ["/elasticsearch/bin/elasticsearch"]
+ENTRYPOINT ["/elasticsearch/bin/elasticsearch","-Des.insecure.allow.root=true"]
